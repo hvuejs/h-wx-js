@@ -1,1 +1,1 @@
-module.exports = require('./dist/h.query.api')
+module.exports = require('./dist/h-ios-input');

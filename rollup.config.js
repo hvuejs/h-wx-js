@@ -4,21 +4,25 @@ import commonjs from 'rollup-plugin-commonjs';
 import babel from "rollup-plugin-babel";
 import pkg from './package.json'
 
+const isPro = process.env.NODE_ENV === "production";
+const plugins = [
+    commonjs(),
+    babel(),
+    filesize()
+]
 
+if (isPro) {
+    plugins.push(terser());
+}
 
 export default [
   {
     input: 'src/index.js',
     output: [
-		{ file: pkg.main, format: 'cjs', name: 'h.ios.input' },
-		{ file: pkg.module, format: 'es', name: 'h.ios.input' },
-		{ file: pkg.browser, format: 'umd', name: 'h.ios.input' }
+		{ file: pkg.main, format: 'cjs', name: 'hIosInput' },
+		{ file: pkg.module, format: 'esm', name: 'hIosInput' },
+		{ file: pkg.browser, format: 'umd', name: 'hIosInput' }
     ],
-    plugins: [
-		commonjs(),
-		babel(),
-		terser(),
-		filesize()
-    ]
+    plugins
   }
 ]

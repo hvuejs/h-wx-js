@@ -3,9 +3,9 @@
 	"version": "1.0.0",
 	"description": "Solve the problem of h5 webpage opening in wechat, input losing focus, and the bottom blank after the ios keyboard is folded up",
 	"license": "MIT",
-	"main": "dist/h.ios.input.cjs.js",
-	"module": "dist/h.ios.input.esm.js",
-	"browser": "dist/h.ios.input.js",
+	"main": "dist/h-ios-input.cjs.js",
+	"module": "dist/h-ios-input.esm.js",
+	"browser": "dist/h-ios-input.js",
 	"repository": "haojs-next/h-ios-input",
 	"author": {
 		"name": "hao",
@@ -15,7 +15,7 @@
 		"node": ">=12"
 	},
 	"scripts": {
-		"build": "rollup -c",
+		"build": "rollup -c --environment NODE_ENV:production",
 		"dev": "rollup -c -w"
 	},
 	"files": [

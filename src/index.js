@@ -1,20 +1,13 @@
-/*
- * @Date: 2021-09-29 22:41:06
- * @Author: 清风浩明月
- * @Version:
- * @LastEditTime: 2021-09-29 23:10:41
- * @Description:
- */
 import { isWeiXinAndIos, isIos } from "./util";
 
 export function watchInput() {
 	var myFunction;
-	var isWXAndIos = isWeiXinAndIos()
+	var isWXAndIos = isWeiXinAndIos();
 	if (isWXAndIos) { // 既是微信浏览器 又是ios============（因为查到只有在微信环境下，ios手机上才会出现input失去焦点的时候页面被顶起）
-		document.body.addEventListener('focusin', () => { // 软键盘弹起事件
+		document.body.addEventListener('focusin', () => { // 软键盘弹起事件 （focusin：在元素获得焦点时触发，与 HTML 事件 focus 等价，但它冒泡。）
 			clearTimeout(myFunction);
 		})
-		document.body.addEventListener('focusout', () => { // 软键盘关闭事件
+		document.body.addEventListener('focusout', () => { // 软键盘关闭事件 （focusout：在元素失去焦点时触发。与 HTML 事件 blur 等价，冒泡）
 			clearTimeout(myFunction)
 			myFunction = setTimeout(function () {
 				window.scrollTo({
@@ -34,9 +27,9 @@ export function fixScroll () {
 	}
 }
 
-const h = {
+const hwx = {
 	watchInput,
 	fixScroll
 }
 
-export default h;
+export default hwx;
