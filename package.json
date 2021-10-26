@@ -1,18 +1,18 @@
 {
-	"name": "h-ios-input",
+	"name": "h-wx-js",
 	"version": "1.0.0",
 	"description": "Solve the problem of h5 webpage opening in wechat, input losing focus, and the bottom blank after the ios keyboard is folded up",
 	"license": "MIT",
-	"main": "dist/h-ios-input.cjs.js",
-	"module": "dist/h-ios-input.esm.js",
-	"browser": "dist/h-ios-input.js",
-	"repository": "haojs-next/h-ios-input",
+	"main": "dist/h-wx-js.cjs.js",
+	"module": "dist/h-wx-js.esm.js",
+	"browser": "dist/h-wx-js.js",
+	"repository": "hvuejs/h-wx-js",
 	"author": {
 		"name": "hao",
-		"url": "https://github.com/haojs-next/h-ios-input"
+		"url": "https://github.com/hvuejs/h-wx-js"
 	},
 	"engines": {
-		"node": ">=12"
+		"node": ">=10"
 	},
 	"scripts": {
 		"build": "rollup -c --environment NODE_ENV:production",
@@ -20,16 +20,16 @@
 	},
 	"files": [
 		"index.js",
-		"dist/**/*"
+		"dist/*.js"
 	],
 	"keywords": [
 		"browser",
-		"h-ios-input",
-		"ios",
-		"vueinput",
-		"hiosinput",
+		"h-wx-js",
+		"wx-sdk",
+		"vue",
 		"input",
-		"h5input"
+		"wx-sdk-js",
+		"h5"
 	],
 	"devDependencies": {
 		"core-js": "^3.18.0",

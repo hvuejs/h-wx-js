@@ -27,9 +27,5 @@ export function fixScroll () {
 	}
 }
 
-const hwx = {
-	watchInput,
-	fixScroll
-}
 
-export default hwx;
+export { initFontSize } from "./wx-fontsize";

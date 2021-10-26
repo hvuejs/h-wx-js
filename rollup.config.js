@@ -15,13 +15,25 @@ if (isPro) {
     plugins.push(terser());
 }
 
+
+// 设置头部注释信息
+const banner =
+    '/*!\n' +
+    ` * h-wx-js v${pkg.version}\n` +
+    ` * (c) 2018-${new Date().getFullYear()} ljh\n` +
+    ' * Released under the MIT License.\n' +
+    ' */'
+
+// 设置尾部注释信息
+const footer = `\n/** ${new Date()} **/`
+
 export default [
   {
     input: 'src/index.js',
     output: [
-		{ file: pkg.main, format: 'cjs', name: 'hIosInput' },
-		{ file: pkg.module, format: 'esm', name: 'hIosInput' },
-		{ file: pkg.browser, format: 'umd', name: 'hIosInput' }
+		{ file: pkg.main, format: 'cjs', name: 'hwx', banner, footer },
+		{ file: pkg.module, format: 'esm', name: 'hwx', banner, footer },
+		{ file: pkg.browser, format: 'umd', name: 'hwx', banner, footer }
     ],
     plugins
   }

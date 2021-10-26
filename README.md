@@ -1,9 +1,13 @@
-# h-ios-input
+# h-wx-js
 
 ## Install
 
 ```base
-    npm install h-ios-input --save
+    npm install h-wx-js
+
+	or
+
+	yarn add h-wx-js
 ```
 
 
@@ -12,22 +16,49 @@
 Example for how to import the ES module from another module:
 
 ```javascript
-import hIosInput from "h-ios-input";
+import * as hwx from "h-wx-js";
 
-hIosInput.watchInput(); // Global listening input
+hwx.watchInput(); // Global listening input
 
 ```
 
+```html
+
+<!-- vue -->
+<div>
+	<input v-model="value" @blur="changeScroll" />
+</div>
+
+
+<script>
+
+import { fixScroll } from "h-wx-js";
+
+export default {
+	data () {
+		return {
+			value: ""
+		}
+	},
+	methods: {
+		changeScroll: function () {
+			fixScroll();
+		}
+	}
+}
+
+</script>
+
+```
+
+init ```font-size```
+
 ```javascript
 
-import hIosInput from "h-ios-input";
+// main.js
 
-// vue
-<input @blur="changeScroll" />
+import { initFontSize } from "h-wx-js";
 
-// methods:
-function changeScroll () {
-  hIosInput.fixScroll();
-}
+initFontSize();
 
 ```

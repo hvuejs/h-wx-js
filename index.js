@@ -1,1 +1,1 @@
-module.exports = require('./dist/h-ios-input');
+module.exports = require('./dist/h-wx-js');
