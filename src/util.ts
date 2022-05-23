@@ -6,14 +6,14 @@ var ua = '' + u.toLowerCase();
 /**
  * 判断 ios 设备
  */
-export function isIos () {
-	let bool = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+export function isIos (): boolean {
+	let bool: boolean = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
 	return bool;
 }
 
-export function isWeiXinAndIos() {
+export function isWeiXinAndIos(): boolean {
 	// 通过正则表达式匹配ua中是否含有MicroMessenger字符串且是IOS系统
-	var isWeixin = /MicroMessenger/i.test(ua) // 是在微信浏览器
+	var isWeixin: boolean = /MicroMessenger/i.test(ua) // 是在微信浏览器
 	// var isIos = /\(i[^;]+;( U;)? CPU.+Mac OS X/i.test(ua) // 是IOS系统
 	return isWeixin && isIos()
 }

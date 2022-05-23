@@ -3,11 +3,11 @@
 ## Install
 
 ```base
-    npm install h-wx-js
+npm install h-wx-js
 
-	or
+or
 
-	yarn add h-wx-js
+yarn add h-wx-js
 ```
 
 
