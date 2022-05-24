@@ -27,5 +27,20 @@ export function fixScroll (): void {
 	}
 }
 
-
 export { initFontSize } from "./wx-fontsize";
+
+import { initFontSize } from "./wx-fontsize";
+
+export interface Hwxjs {
+	watchInput(): void;
+	fixScroll(): void;
+	initFontSize(): void;
+}
+
+const hwxjs: Hwxjs = {
+	watchInput,
+	fixScroll,
+	initFontSize
+}
+
+export default hwxjs;

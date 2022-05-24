@@ -1,12 +1,13 @@
 {
 	"name": "h-wx-js",
-	"version": "1.1.0",
+	"version": "1.1.3",
 	"description": "Solve the problem of h5 webpage opening in wechat, input losing focus, and the bottom blank after the ios keyboard is folded up",
 	"license": "MIT",
 	"main": "dist/h-wx-js.cjs.js",
 	"module": "dist/h-wx-js.esm.js",
 	"browser": "dist/h-wx-js.js",
 	"repository": "hvuejs/h-wx-js",
+	"types": "index.d.ts",
 	"author": {
 		"name": "hao",
 		"url": "https://github.com/hvuejs/h-wx-js"
@@ -20,9 +21,10 @@
 	},
 	"files": [
 		"index.js",
-		"dist/*.js"
+		"dist/*.js",
+		"*.d.ts",
+		"tsconfig.json"
 	],
-	"types": "dist/h-wx-js.d.ts",
 	"keywords": [
 		"browser",
 		"h-wx-js",

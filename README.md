@@ -16,7 +16,7 @@ yarn add h-wx-js
 Example for how to import the ES module from another module:
 
 ```javascript
-import * as hwx from "h-wx-js";
+import hwx from "h-wx-js";
 
 hwx.watchInput(); // Global listening input
 

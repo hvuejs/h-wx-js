@@ -35,7 +35,7 @@ if (isPro) {
 const banner =
 	"/*!\n" +
 	` * h-wx-js v${pkg.version}\n` +
-	` * (c) 2018-${new Date().getFullYear()} ljh\n` +
+	` * (c) 2018-${new Date().getFullYear()} hao\n` +
 	" * Released under the MIT License.\n" +
 	" */";
 
