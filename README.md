@@ -20,6 +20,12 @@ import * as hwx from "h-wx-js";
 
 hwx.watchInput(); // Global listening input
 
+or
+
+import { watchInput } from "h-wx-js";
+
+watchInput();
+
 ```
 
 ```html
